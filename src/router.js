@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Home from './views/Home.vue'
+import Add from './views/Add.vue'
 
 Vue.use(Router)
 
@@ -28,8 +29,12 @@ export default new Router({
           component: () => import(/* webpackChunkName: "user" */ './views/User.vue')
         }
       ]
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: Add
     }
-
     // {
     //   path: '/about',
     //   name: 'about',
